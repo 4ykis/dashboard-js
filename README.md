@@ -80,7 +80,7 @@ Using session storage for saving data.
 </table>
 
 EXAMPLE JSON:
-<code>
+<pre>
 var dataJson = {
         'header': [
             {
@@ -459,10 +459,10 @@ var dataJson = {
             }
         ]
     }
-</code>
+</pre>
 
 EXAMPLE Init:
-<code>
+<pre>
 dashboard.init(
 $('.js-init-dashboard'),
 dataJson,
@@ -475,4 +475,4 @@ options: true,
 search: true
 }
 );
-<code>
+</pre>
