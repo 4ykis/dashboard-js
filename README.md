@@ -79,6 +79,23 @@ Using session storage for saving data.
 <td>//name of JSON column amount of what needed to calculate</td></tr>
 </table>
 
+
+EXAMPLE Init:
+<pre>
+ dashboard.init(
+            $('.js-init-dashboard'),  //JQUERY element where you init
+            dataJson,   //JSON (your data)
+            {
+                selector: 'users_',
+                pagination: true,
+                itemsPerPage: 10,
+                showPagItems: 5,
+                options: true,
+                search: true
+            }  //Object with params
+        );
+</pre>
+
 EXAMPLE JSON:
 <pre>
 var dataJson = {
@@ -461,18 +478,3 @@ var dataJson = {
     }
 </pre>
 
-EXAMPLE Init:
-<pre>
-dashboard.init(
-$('.js-init-dashboard'),
-dataJson,
-{
-selector: 'users_',
-pagination: true,
-itemsPerPage: 10,
-showPagItems: 5,
-options: true,
-search: true
-}
-);
-</pre>
