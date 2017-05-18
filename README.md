@@ -4,7 +4,7 @@ Script for creating tables and dashboards.
 Using session storage for saving data.
 
 <h3>Options:</h3>
-	<table>
+<table>
 <tr>
 <td>selector</td>
 <td>string</td>
