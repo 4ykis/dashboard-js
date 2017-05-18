@@ -1,0 +1,293 @@
+body{
+
+}
+.dsh{
+  &-options-block{
+	background : #ffffff;
+	width : 100%;
+	padding : 10px 20px;
+	border-radius: 5px;
+	border:1px solid $clr-border;
+	@include clearfix();
+  }
+
+  &-search{
+	@include to-left();
+	i{
+	  line-height : 40px;
+	  display : inline-block;
+	}
+	input[type='text']{
+	  display : inline-block;
+	  margin-left :10px;
+	  line-height : 40px;
+	  border:none;
+	  min-width :300px;
+	  font-size :$fz-standart;
+	  font-family :$font-main;
+	  &:focus{
+		outline:none;
+	  }
+	}
+  }
+
+  &-options{
+	@include to-right();
+	font-family :$font-main;
+	line-height : 40px;
+	position : relative;
+	font-size :$fz-standart;
+	cursor: pointer;
+	svg{
+	  display : inline-block;
+	  margin-left : 5px;
+	  vertical-align : middle;
+	}
+	&--list{
+	  display : none;
+	  position : absolute;
+	  top : 40px;
+	  width :200px;
+	  right : -10px;
+	  background : #ffffff;
+	  border:1px solid  $clr-border;
+	  padding : 10px;
+	  font-size :$fz-small;
+	  border-radius: 5px;
+	  label{
+		cursor : pointer;
+	  }
+	  span{
+		width : 16px;
+		height : 16px;
+		display : inline-block;
+		vertical-align : text-bottom;
+		border:1px solid $clr-border;
+		color : $clr-link;
+		margin-right : 5px;
+		position : relative;
+		i{
+		  opacity : 0;
+		  top : 1px;
+		  left : 1px;
+		  line-height : 16px;
+		  height : 16px;
+		  width : 16px;
+		  position : absolute;
+		}
+	  }
+	  input[type='checkbox']{
+		display : none;
+		opacity : 0;
+		visibility : hidden;
+		&:checked+span i{
+		  opacity :1;
+		}
+	  }
+	}
+  }
+
+  &-table{
+	display : table;
+	width : 100%;
+	margin-top : 20px;
+	padding :10px 15px;
+	background : #ffffff;
+	border-radius: 5px;
+	border:1px solid $clr-border;
+
+	&-head,&-items{
+	  display : table-row;
+	  &:last-child{
+		.dsh-table-col{
+		  border-bottom: none;
+		}
+	  }
+	}
+	&-head{
+	  line-height : 50px;
+	  font-family : $font-title;
+	}
+	&-col{
+	  display : table-cell;
+	  border-bottom : 1px solid $clr-border;
+	  padding : 5px 10px;
+
+
+	  &.dsh-link{
+		a{
+		  color:$clr-link;
+		  font-family :$font-link;
+		  text-decoration : underline;
+		  font-size : $fz-title;
+		  &:hover{
+			text-decoration : none;
+		  }
+		}
+	  }
+	  &.pointer-cursor{
+		cursor: pointer;
+	  }
+	  &.dsh-standart{
+		p,em{
+		  font-size : $fz-standart;
+		  font-family : $font-dsh-text;
+		  color : $clr-text;
+		  font-style : normal;
+		}
+	  }
+	  &.dsh-feedback{
+		text-align : left;
+		.rating-value{
+		  display : inline-block;
+		  vertical-align : text-bottom;
+		  font-family : $font-main;
+		  margin-right : 4px;
+		}
+		.rating-votes{
+		  display : inline-block;
+		  vertical-align : bottom;
+		  color : $clr-link;
+		  i:not(.active):before{
+			content: "\63";
+		  }
+		}
+	  }
+	  &.dsh-action{
+		.btn{
+		  line-height : 30px;
+		  text-align : center;
+		  font-family : $font-link;
+		  cursor:pointer;
+		  font-size :$fz-small;
+		  background : #fff;
+		  border:1px solid $clr-btn;
+		  border-radius: 5px;
+		  color:$clr-text;
+		  transition: .5s;
+		  padding : 0 10px;
+		  &:hover{
+			background : $clr-btn;
+			color : #ffffff;
+		  }
+		}
+	  }
+	  &.dsh-company{
+		a{
+		  @include clearfix();
+		  &>div{
+			float : left;
+			position : relative;
+			img{
+			  border-radius: 50%;
+			  margin :7px 0;
+			}
+			p.name{
+			  margin : 0 0 0 10px;
+			  font-family :$font-dsh-text;
+			  line-height : 30px;
+			  font-size :$fz-title;
+			  color : $clr-text;
+			}
+			p.adress{
+			  margin : 0 0 0 10px;
+			  font-family :$font-dsh-text;
+			  line-height : 20px;
+			  font-size : $fz-small;
+			  color : lighten($clr-text,10%);
+			}
+		  }
+		}
+		&.dsh-social{
+		  .social-icon{
+			position : absolute;
+			width : 18px;
+			height : 18px;
+			border-radius: 50px;
+			right : -5px;
+			bottom : 5px;
+			color : #ffffff;
+			text-align : center;
+			font-size : 12px;
+			line-height :22px;
+			&.icon-twitter{ background : $c-tw;}
+			&.icon-facebook{ background : $c-fb;}
+			&.icon-vkontakte{ background : $c-vk;}
+			&.icon-twitch{ background : $c-twch;}
+			&.icon-youtube{ background : $c-yt;}
+			&.icon-google-plus{ background : $c-gp;}
+			&.icon-instagram{ background : $c-inst;}
+			&.icon-linkedin{ background : $c-in;}
+			&.icon-odnoklassniki{ background : $c-odn;}
+		  }
+		}
+	  }
+	}
+
+
+  }
+
+  &-footer{
+	margin-top : 20px;
+	width : 100%;
+	padding : 10px 20px;
+	border-radius: 5px;
+	border:1px solid $clr-border;
+	background : #ffffff;
+	@include clearfix();
+  }
+  &-pagination{
+	@include to-left();
+	display : flex;
+	flex-wrap: nowrap;
+	a{
+	  display : inline-block;
+	  cursor: pointer;
+	  border:1px solid $clr-border;
+	  text-align : center;
+	  line-height : 28px;
+	  width : 30px;
+	  color : $clr-link;
+	  &.arrow-i{
+		width : 30px;
+		height : 30px;
+		font-size : 15px;
+		color : $clr-text;
+
+		i{
+		  line-height : 32px;
+		}
+		&:hover{
+		  border-color:$clr-link;
+		}
+	  }
+	}
+
+	.js-dshjs-pag-field{
+	  padding : 0 5px;
+	  font-family: $font-dsh-text;
+	  font-size :$fz-small;
+	  a{
+		font-family : $font-link;
+		text-decoration : none;
+		color : $clr-text;
+		&.active{
+		  //color : $clr-link;
+		  border-color: $clr-link;
+		}
+		&:not(:last-child){
+		  margin-right : 5px;
+		}
+	  }
+	}
+	input{
+	  height : 30px;
+	  border:1px solid $clr-border;
+	  padding : 0 5px;
+	  max-width :50px;
+	  &:focus{
+		outline: none;
+	  }
+	}
+  }
+}
