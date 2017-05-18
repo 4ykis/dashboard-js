@@ -3,7 +3,7 @@
 Script for creating tables and dashboards.
 Using session storage for saving data.
 
-<a href='https://4ykis.github.io/dashboard-js/'>DEMO</a>
+<a href='https://4ykis.github.io/dashboard-js/' target='_blank'>DEMO</a>
 
 <h3>Options:</h3>
 <table>
