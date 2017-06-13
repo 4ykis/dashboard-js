@@ -80,12 +80,15 @@ Using session storage for saving data.
 <td>string</td>
 <td>//name of JSON column amount of what needed to calculate</td></tr>
 </table>
-Methods: 
-afterInit: function(block){ //CODE }  -- block is your element where you init
-after init dashboard
 
-beforeInit: function(block){ //CODE }  -- block is your element where you init
-after create LocalStorage Data and main blocks for dashboard, before init items/header/options/search/pagination
+<h3>Methods:</h3>
+<table><tr><td>afterInit: function(block){ //CODE }  -- block is your element where you init</td>
+<td>after init dashboard</td>
+</tr><tr>
+
+<td>beforeInit: function(block){ //CODE }  -- block is your element where you init</td>
+<td>after create LocalStorage Data and main blocks for dashboard, before init items/header/options/search/pagination</td>
+</tr></table>
 
 EXAMPLE Init:
 <pre>
