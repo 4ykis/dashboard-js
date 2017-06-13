@@ -424,8 +424,7 @@
 </script>
 <script>
     if ($('.js-init-dashboard').length) {
-        dashboard.init(
-            $('.js-init-dashboard'),
+         $('.js-init-dashboard').dshjs(
             dataJson,
             {
                 selector: 'users_',
