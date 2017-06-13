@@ -101,7 +101,10 @@ EXAMPLE Init:
                 itemsPerPage: 10,
                 showPagItems: 5,
                 options: true,
-                search: true
+                search: true,
+		afterInit:function( block ){
+			console.log( block );
+		}
             }  //Object with options
         );
 </pre>
