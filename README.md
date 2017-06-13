@@ -80,12 +80,17 @@ Using session storage for saving data.
 <td>string</td>
 <td>//name of JSON column amount of what needed to calculate</td></tr>
 </table>
+Methods: 
+afterInit: function(block){ //CODE }  -- block is your element where you init
+after init dashboard
 
+beforeInit: function(block){ //CODE }  -- block is your element where you init
+after create LocalStorage Data and main blocks for dashboard, before init items/header/options/search/pagination
 
 EXAMPLE Init:
 <pre>
- dashboard.init(
-            $('.js-init-dashboard'),  //JQUERY element where you init
+
+            $('.js-init-dashboard').dshjs(  //JQUERY element where you init
             dataJson,   //JSON (your data)
             {
                 selector: 'users_',
@@ -94,7 +99,7 @@ EXAMPLE Init:
                 showPagItems: 5,
                 options: true,
                 search: true
-            }  //Object with params
+            }  //Object with options
         );
 </pre>
 
